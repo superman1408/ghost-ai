@@ -4,32 +4,33 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Phase
 
-- Not started
+- Implementation
 
 ## Current Goal
 
-- Define the immediate implementation goal here.
+- Install and configure 1shadcn/ui and add core UI primitives.
 
 ## Completed
 
-- None yet.
+- Cleaned Next.js boilerplate and trimmed Tailwind CSS.
 
 ## In Progress
 
-- None yet.
+- Add shadcn UI components: Button, Card, Dialog, Input, Tabs, TextArea, ScrollArea.
+- Install `lucide-react` and add `lib/utils.ts` with `cn()` helper.
 
 ## Next Up
 
-- Add the next planned feature unit here.
+- Verify component imports and dark theme styling.
 
 ## Open Questions
 
-- Add unresolved product or implementation questions here.
+- None.
 
 ## Architecture Decisions
 
-- Add decisions that affect the system design or data model.
+- Use shadcn UI primitives to standardize component styling and enable Tailwind-based theming.
 
 ## Session Notes
 
-- Add context needed to resume work in the next session.
+- Working from a minimal Next.js app with Tailwind v4 and no existing `components/ui` or `lib/utils.ts` files.
