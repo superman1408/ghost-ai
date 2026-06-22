@@ -12,16 +12,17 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Completed
 
-- Cleaned Next.js boilerplate and trimmed Tailwind CSS.
+- Implemented editor chrome components: `EditorNavbar`, `ProjectSidebar` and dialog pattern placeholder.
+- Added lightweight local icon components for sidebar and plus icons.
+- Wired `EditorNavbar` and `ProjectSidebar` into `app/layout.tsx` and enabled interactive toggle via `EditorShell`.
 
 ## In Progress
 
-- Add shadcn UI components: Button, Card, Dialog, Input, Tabs, TextArea, ScrollArea.
-- Install `lucide-react` and add `lib/utils.ts` with `cn()` helper.
+- Verify new editor components compile and integrate with layout; check dark theme and hydration behavior.
 
 ## Next Up
 
-- Verify component imports and dark theme styling.
+- Add dialog implementation when needed (pattern ready).
 
 ## Open Questions
 
