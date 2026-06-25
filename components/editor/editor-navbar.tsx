@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Button } from "@/components/ui/button"
 import { PanelLeftOpen, PanelLeftClose } from "./icons"
+import { UserButton } from "@clerk/nextjs"
 
 interface EditorNavbarProps {
     isSidebarOpen: boolean
@@ -26,7 +27,9 @@ export default function EditorNavbar({ isSidebarOpen, onToggle }: EditorNavbarPr
 
             <div className="flex-1 flex items-center justify-center">{/* center slot - reserved */}</div>
 
-            <div className="flex items-center gap-2">{/* right slot - empty for now */}</div>
+            <div className="flex items-center gap-2">
+                <UserButton />
+            </div>
         </header>
     )
 }

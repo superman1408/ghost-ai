@@ -8,21 +8,23 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Current Goal
 
-- Install and configure 1shadcn/ui and add core UI primitives.
+- Implement Clerk authentication, route protection, and editor gating.
 
 ## Completed
 
-- Implemented editor chrome components: `EditorNavbar`, `ProjectSidebar` and dialog pattern placeholder.
-- Added lightweight local icon components for sidebar and plus icons.
-- Wired `EditorNavbar` and `ProjectSidebar` into `app/layout.tsx` and enabled interactive toggle via `EditorShell`.
+- Added Clerk authentication wiring with `ClerkProvider` in root layout.
+- Created root `proxy.ts` middleware to protect all non-public routes using `NEXT_PUBLIC_CLERK_SIGN_IN_URL` and `NEXT_PUBLIC_CLERK_SIGN_UP_URL`.
+- Added `sign-in` and `sign-up` pages using Clerk components and app theme variables.
+- Added protected `/editor` route using server-side `auth().protect()`.
+- Added Clerk `UserButton` to the editor navbar for profile and sign-out.
 
 ## In Progress
 
-- Verify new editor components compile and integrate with layout; check dark theme and hydration behavior.
+- Re-validate build after fixing root auth routing and Clerk import path.
 
 ## Next Up
 
-- Add dialog implementation when needed (pattern ready).
+- Confirm `npm run build` passes and test actual sign-in/sign-up flows.
 
 ## Open Questions
 
@@ -30,8 +32,9 @@ Update this file whenever the current phase, active feature, or implementation s
 
 ## Architecture Decisions
 
-- Use shadcn UI primitives to standardize component styling and enable Tailwind-based theming.
+- Use Clerk middleware and App Router server auth for route protection.
+- Keep auth pages minimal and theme them with CSS variables.
 
 ## Session Notes
 
-- Working from a minimal Next.js app with Tailwind v4 and no existing `components/ui` or `lib/utils.ts` files.
+- Auth implementation follows the project spec for Clerk dark theme and route protection.
